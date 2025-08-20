@@ -1,15 +1,47 @@
 ---
-title: "À propos"
+import '../styles/global.css';
+
+const pageTitle = "À propos de moi";
+
+
+const skills = [
+	"HTML",
+	"CSS",
+	"JavaScript",
+	"Astro",
+	"React",
+	"Figma",
+	"webflow"
+];
+
+const defaultSkillColor = "grey"
+const defaultFontWeight = "light";
+const bodyFontSize = "1.2rem";
 ---
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>À propos</title>
+        <title>{pageTitle}</title>
+        <style define:vars={{ defaultSkillColor, defaultFontWeight }}>
+            h1 {
+                color: red;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--defaultSkillColor);
+                font-weight: var(--defaultFontWeight);
+                font-size: var(--bodyFontSize);
+            }
+        </style>
     </head>
     <body>
-        <h1>À propos de moi</h1>
+        <h1>{pageTitle}</h1>
         <p>
             Après 6 ans en tant que développeuse web et product manager, j'ai choisi de me consacrer pleinement à l'art, mon rêve de toujours, en intégrant en 2025 les Beaux-Arts de Paris. 
         </p>
+        <p>Mes compétences sont :</p>
+        <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
+        </ul>
     </body>
 </html></p></head>
