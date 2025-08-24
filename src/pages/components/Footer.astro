@@ -1,0 +1,23 @@
+---
+import Social from '../components/Social.astro';
+---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+    p {
+        margin: 0 0 0.5rem 0;
+    }
+</style>
+
+<footer>
+    <p>Découvrez mon travail sur mes projets sur :</p>
+    <Social platform={"github"} username={"valentinelanger"} />
+    <Social platform={"linkedin"} username={"in/valentinelanger"} />
+    <Social platform={"instagram"} username={"valentine.langer"} />
+</footer>
